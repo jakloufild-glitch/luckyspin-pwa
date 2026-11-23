@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="theme-color" content="#0b0f1a" />
+  <meta name="description" content="LuckySpin Casino - Play & Win" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>LuckySpin Casino</title>
+</head>
+<body>
+  <div id="app">
+    <!-- Status bar imitation -->
+    <div class="status-bar">
+      <span class="logo">LuckySpin</span>
+      <span class="balance" id="balance">$1,250.00</span>
+    </div>
+
+    <!-- Screens -->
+    <div id="screen-home" class="screen active">
+      <div class="hero">
+        <h1>Welcome Back</h1>
+        <p>Your next win is one spin away</p>
+        <button class="btn-primary" onclick="showScreen('games')">Play Now</button>
+      </div>
+      <div class="cards">
+        <div class="card" onclick="showScreen('games')">
+          <div class="card-icon">🎰</div>
+          <div class="card-title">Slots</div>
+          <div class="card-sub">120+ games</div>
+        </div>
+        <div class="card" onclick="showScreen('games')">
+          <div class="card-icon">✈️</div>
+          <div class="card-title">Crash</div>
+          <div class="card-sub">Aviator style</div>
+        </div>
+        <div class="card" onclick="showScreen('bonus')">
+          <div class="card-icon">🎁</div>
+          <div class="card-title">Bonus</div>
+          <div class="card-sub">100% up to $500</div>
+        </div>
+        <div class="card" onclick="showScreen('profile')">
+          <div class="card-icon">👤</div>
+          <div class="card-title">Profile</div>
+          <div class="card-sub">Account</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="screen-games" class="screen">
+      <h2 class="screen-title">Games</h2>
+      <div class="game-list">
+        <div class="game-item">
+          <div class="game-thumb">✈️</div>
+          <div class="game-info">
+            <div class="game-name">Sky Crash</div>
+            <div class="game-meta">RTP 97% · Popular</div>
+          </div>
+          <button class="btn-small">Play</button>
+        </div>
+        <div class="game-item">
+          <div class="game-thumb">🎰</div>
+          <div class="game-info">
+            <div class="game-name">Lucky Reels</div>
+            <div class="game-meta">RTP 96.5%</div>
+          </div>
+          <button class="btn-small">Play</button>
+        </div>
+        <div class="game-item">
+          <div class="game-thumb">🃏</div>
+          <div class="game-info">
+            <div class="game-name">BlackJack Pro</div>
+            <div class="game-meta">RTP 99.1%</div>
+          </div>
+          <button class="btn-small">Play</button>
+        </div>
+        <div class="game-item">
+          <div class="game-thumb">🎯</div>
+          <div class="game-info">
+            <div class="game-name">Dice Rush</div>
+            <div class="game-meta">RTP 98%</div>
+          </div>
+          <button class="btn-small">Play</button>
+        </div>
+        <div class="game-item">
+          <div class="game-thumb">💎</div>
+          <div class="game-info">
+            <div class="game-name">Jewel Mines</div>
+            <div class="game-meta">RTP 97.2%</div>
+          </div>
+          <button class="btn-small">Play</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="screen-bonus" class="screen">
+      <h2 class="screen-title">Bonuses</h2>
+      <div class="bonus-card main-bonus">
+        <div class="bonus-badge">WELCOME</div>
+        <div class="bonus-amount">100% up to $500</div>
+        <div class="bonus-desc">+ 100 Free Spins on Lucky Reels</div>
+        <button class="btn-primary">Claim Bonus</button>
+      </div>
+      <div class="bonus-list">
+        <div class="bonus-item">
+          <div>
+            <div class="bonus-item-title">Daily Reload</div>
+            <div class="bonus-item-sub">50% up to $200</div>
+          </div>
+          <button class="btn-outline">Get</button>
+        </div>
+        <div class="bonus-item">
+          <div>
+            <div class="bonus-item-title">Cashback Friday</div>
+            <div class="bonus-item-sub">10% weekly cashback</div>
+          </div>
+          <button class="btn-outline">Get</button>
+        </div>
+        <div class="bonus-item">
+          <div>
+            <div class="bonus-item-title">Free Spins Drop</div>
+            <div class="bonus-item-sub">50 FS every Monday</div>
+          </div>
+          <button class="btn-outline">Get</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="screen-profile" class="screen">
+      <h2 class="screen-title">Profile</h2>
+      <div class="profile-card">
+        <div class="avatar">LS</div>
+        <div class="profile-name">Alex Player</div>
+        <div class="profile-id">ID: 849203</div>
+      </div>
+      <div class="profile-stats">
+        <div class="stat">
+          <div class="stat-value">$1,250</div>
+          <div class="stat-label">Balance</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">$8,430</div>
+          <div class="stat-label">Total Won</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">142</div>
+          <div class="stat-label">Games</div>
+        </div>
+      </div>
+      <div class="menu-list">
+        <div class="menu-item">Deposit</div>
+        <div class="menu-item">Withdraw</div>
+        <div class="menu-item">History</div>
+        <div class="menu-item">Settings</div>
+        <div class="menu-item logout">Log Out</div>
+      </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+      <button class="nav-btn active" data-screen="home" onclick="showScreen('home')">
+        <span class="nav-icon">🏠</span>
+        <span class="nav-label">Home</span>
+      </button>
+      <button class="nav-btn" data-screen="games" onclick="showScreen('games')">
+        <span class="nav-icon">🎮</span>
+        <span class="nav-label">Games</span>
+      </button>
+      <button class="nav-btn" data-screen="bonus" onclick="showScreen('bonus')">
+        <span class="nav-icon">🎁</span>
+        <span class="nav-label">Bonus</span>
+      </button>
+      <button class="nav-btn" data-screen="profile" onclick="showScreen('profile')">
+        <span class="nav-icon">👤</span>
+        <span class="nav-label">Profile</span>
+      </button>
+    </nav>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js').catch(console.error);
+    }
+  </script>
+</body>
+</html>
