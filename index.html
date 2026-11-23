@@ -6,20 +6,18 @@
   <meta name="theme-color" content="#0b0f1a" />
   <meta name="description" content="LuckySpin Casino - Play & Win" />
   <link rel="manifest" href="manifest.json" />
-  <link rel="apple-touch-icon" href="icons/icon-192.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png" />
+  <link rel="stylesheet" href="style.css" />
   <title>LuckySpin Casino</title>
 </head>
 <body>
   <div id="app">
-    <!-- Status bar imitation -->
     <div class="status-bar">
       <span class="logo">LuckySpin</span>
       <span class="balance" id="balance">$1,250.00</span>
     </div>
 
-    <!-- Screens -->
     <div id="screen-home" class="screen active">
       <div class="hero">
         <h1>Welcome Back</h1>
@@ -159,7 +157,6 @@
       </div>
     </div>
 
-    <!-- Bottom Navigation -->
     <nav class="bottom-nav">
       <button class="nav-btn active" data-screen="home" onclick="showScreen('home')">
         <span class="nav-icon">🏠</span>
@@ -180,7 +177,7 @@
     </nav>
   </div>
 
-  <script src="js/app.js"></script>
+  <script src="app.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('sw.js').catch(console.error);
